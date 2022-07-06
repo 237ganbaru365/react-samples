@@ -1,0 +1,27 @@
+## Steps
+
+- バックエンドのセットアップ: server フォルダ
+  - `npm init -y` : package.json 作成
+  - src フォルダに server.ts 作成
+  - `tsc --init` : tsconfig.json 作成
+    - そもそも tsconfig.json って？
+      - TSConfig は TypeScript や JavaScript のプロジェクトの設定を記述するファイル
+      - VSCode のインテリセンスなどはこの設定ファイルを元に参照を解決するので、TypeScript のプロジェクトを作成したらまずこのファイルを作成
+  - `npm i express` : express 追加
+  - `npm i cors` : cors 　追加
+    - そもそも cors って？
+      - 「同一生成元ポリシー」: JavaScript で自由にやりとりできるところは、その JavaScript をとってきたところと同一の場所だけに制限する
+      - cors はその同一生成元ポリシーを解除する役割
+      - JavaScript による自由なアクセスを許可する
+      - つまり、企業側のサーバーに由来しないユーザーも自由にアクセスできる
+  - `npm i mongodb` : mongodb 　追加
+    - そもそも mongodb のパッケージは何している？
+      - JavaScript で mongoDB を操作できるようにするためのドライバー
+    - そもそも mongodb とどうやって接続する？
+      - mongo atlas の無料枠内でクラスターを作成
+  - ディレクトリ構造
+    - server
+      - src
+        - controllers
+        - routes
+        - servicies
