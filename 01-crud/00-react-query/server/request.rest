@@ -1,0 +1,22 @@
+GET http://localhost:3000/
+###
+GET http://localhost:3000/users
+###
+GET http://localhost:3000/users/62c749b5cf39e84285c3f555
+###
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "name": "Sho"
+}
+###
+PATCH http://localhost:3000/users/62c749b5cf39e84285c3f555
+Content-Type: application/json
+
+{
+    "name": "F updated",
+    "age": 22
+}
+###
+DELETE http://localhost:3000/users/62c749b5cf39e84285c3f555

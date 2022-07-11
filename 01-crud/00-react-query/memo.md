@@ -19,9 +19,15 @@
       - JavaScript で mongoDB を操作できるようにするためのドライバー
     - そもそも mongodb とどうやって接続する？
       - mongo atlas の無料枠内でクラスターを作成
+      - initDb と getDb がある
+      - MONGO_DB_NAME は　 browser collections から持ってきている
   - ディレクトリ構造
-    - server
-      - src
-        - controllers
-        - routes
-        - servicies
+    - MVC パターン（Modell, View, Controller)を参考
+    - 特に Express/Node でよく見るデザインパターンが下記
+  - server フォルダ内に関しては、変数は env ファイルではなく、`nodemon.json` の方がいい
+    - そもそも.env ファイルを使いたい時は、npm で `dotenv`パッケージをインストールする必要あり
+    - とはいえ、nodemon を使ってアプリケーションを動かす場合は基本的に、nodemon.json に環境変数を格納
+      - 環境変数 : develop と production で変数が変わるもの
+    - react の場合は、最初から env ファイルが組み込みされているので楽だがそれは特殊例
+    - `nodemon.json` の中に env という名前の object を作成して、その中に変数を格納する。そうすると、node が env 直下を参照できる
+    - その際は、process.env.~~で参照可能
