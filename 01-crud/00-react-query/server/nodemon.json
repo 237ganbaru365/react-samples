@@ -1,8 +1,0 @@
-{
-  "env": {
-    "MONGO_USER": "fumina237",
-    "MONGO_PASS": "Na3579fumi",
-    "MONGO_DB_NAME": "crud-sample",
-    "PORT": 3000
-  }
-}
